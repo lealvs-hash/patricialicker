@@ -3,37 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrícia Licker | Podologia de Excelência em Porto Alegre</title>
-    
     <!-- SEO & Indexação Google -->
-    <meta name="description" content="Patrícia Licker - Podóloga especialista com 10 anos de experiência no Centro de Porto Alegre. Tratamento de unha encravada, podoprofilaxia e pé diabético na Scholl Podologia.">
-    <meta name="keywords" content="podologia, podologa, podologia centro de porto alegre, unha encravada, podoprofilaxia, onicofose, órtese de unha, pé de atleta, frieira, calosidades, scholl podologia, patricia licker podologa">
+    <title>Patrícia Licker | Podologia de Excelência em Porto Alegre | Scholl Podologia</title>
+    <meta name="description" content="Patrícia Licker é podóloga especialista com 10 anos de experiência no Centro Histórico de Porto Alegre. Tratamento de unha encravada, podoprofilaxia e onicofose na Scholl Podologia.">
+    <meta name="keywords" content="podologia, podologa porto alegre, podologia centro porto alegre, unha encravada porto alegre, podoprofilaxia, onicofose, órtese de unha, pé de atleta, frieira, calosidades, scholl podologia, patricia licker podologa">
     <meta name="author" content="Patrícia Licker">
-    <link rel="canonical" href="https://patricialicker.com.br">
+    <link rel="canonical" href="https://patricialickerpodologia.com.br">
+    
+    <!-- Open Graph (Redes Sociais) -->
+    <meta property="og:title" content="Patrícia Licker | Podologia de Excelência em Porto Alegre">
+    <meta property="og:description" content="Especialista em saúde dos pés no centro de Porto Alegre com 10 anos de experiência. Agende sua consulta na Scholl Podologia.">
+    <meta property="og:url" content="https://patricialickerpodologia.com.br">
+    <meta property="og:type" content="website">
     
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="favicom-500x500.jpg">
     
+    <!-- Scripts e Fontes -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    
     <style>
         :root {
             --soft-pink: #fdf2f8;
             --deep-pink: #db2777;
             --ice-blue: #f8fafc;
         }
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Montserrat', sans-serif;
             background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
             color: #374151;
         }
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-        }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
         .glass-morphism {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
@@ -56,13 +59,11 @@
             opacity: 1;
             transform: translateY(0);
         }
-        
         .accordion-content {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
         .mobile-menu {
             transform: translateX(100%);
             transition: transform 0.3s ease-in-out;
@@ -70,50 +71,57 @@
         .mobile-menu.active {
             transform: translateX(0);
         }
+        .card-title {
+            word-break: keep-all;
+            overflow-wrap: break-word;
+        }
     </style>
 </head>
 <body class="overflow-x-hidden">
 
-    <!-- Navigation -->
+    <!-- Navegação -->
     <nav class="fixed w-full z-50 glass-morphism py-3 px-6 md:px-12 flex justify-between items-center">
+        <!-- Logótipo Patricia Licker Podologia -->
         <div class="flex items-center gap-3">
             <i data-lucide="footprints" class="text-pink-600 w-8 h-8"></i>
-            <div class="flex flex-col items-center leading-tight">
+            <div class="flex flex-col items-center leading-tight text-center">
                 <span class="text-xl md:text-2xl font-bold text-pink-600 tracking-tight">Patrícia Licker</span>
                 <span class="text-[10px] md:text-xs font-semibold text-pink-400 uppercase tracking-[0.3em] -mt-1">Podologia</span>
             </div>
         </div>
         
+        <!-- Menu Desktop -->
         <div class="hidden md:flex gap-8 font-medium items-center">
             <a href="#inicio" class="hover:text-pink-600 transition">Início</a>
             <a href="#sobre" class="hover:text-pink-600 transition">A Patrícia</a>
             <a href="#servicos" class="hover:text-pink-600 transition">Tratamentos</a>
-            <a href="https://wa.me/55518443809?text=Olá,%20entrei%20em%20contato%20ao%20ver%20o%20site.%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Patricia%20Licker." target="_blank" class="bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-700 transition shadow-md shadow-pink-100">Agendar</a>
+            <a href="https://wa.me/555184438093?text=Olá,%20entrei%20em%20contato%20ao%20ver%20o%20site.%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Patricia%20Licker." target="_blank" class="bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-700 transition shadow-md shadow-pink-100">Agendar</a>
         </div>
 
+        <!-- Toggle Menu Mobile -->
         <button class="md:hidden text-pink-600 p-2 border border-pink-100 rounded-lg bg-white/50" id="menuToggle">
             <i data-lucide="footprints"></i>
         </button>
     </nav>
 
-    <!-- Mobile Sidebar -->
+    <!-- Menu Lateral Mobile -->
     <div id="mobileMenu" class="fixed inset-0 z-40 bg-white/95 mobile-menu md:hidden flex flex-col justify-center items-center gap-8 text-2xl font-bold">
         <a href="#inicio" onclick="toggleMenu()" class="text-gray-800">Início</a>
         <a href="#sobre" onclick="toggleMenu()" class="text-gray-800">A Patrícia</a>
         <a href="#servicos" onclick="toggleMenu()" class="text-gray-800">Tratamentos</a>
-        <a href="https://wa.me/555184438093?text=Olá,%20entrei%20em%20contato%20ao%20ver%20o%20site.%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Patricia%20Licker." onclick="toggleMenu()" class="bg-pink-600 text-white px-8 py-3 rounded-full text-lg">Agendar Agora</a>
+        <a href="https://wa.me/555184438093?text=Olá,%20entrei%20em%20contato%20ao%20ver%20o%20site.%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Patricia%20Licker." onclick="toggleMenu()" class="bg-pink-600 text-white px-8 py-3 rounded-full text-lg shadow-xl shadow-pink-200">Agendar Agora</a>
         <button onclick="toggleMenu()" class="mt-8 text-pink-400 flex items-center gap-2 text-sm font-normal"><i data-lucide="x"></i> Fechar</button>
     </div>
 
     <!-- Hero Section -->
     <section id="inicio" class="min-h-screen pt-32 pb-12 px-6 flex flex-col md:flex-row items-center justify-center gap-12 max-w-7xl mx-auto">
-        <div class="flex-1 space-y-6">
+        <div class="flex-1 space-y-6 text-center md:text-left">
             <span class="text-pink-600 font-semibold tracking-widest uppercase text-xs md:text-sm bg-pink-50 px-3 py-1 rounded-full inline-block italic">10 Anos cuidando da saúde dos pés</span>
             <h1 class="text-4xl md:text-7xl font-bold leading-tight text-gray-900">Passos leves começam com <span class="italic text-pink-500 underline decoration-pink-200">carinho e técnica.</span></h1>
-            <p class="text-lg text-gray-600 leading-relaxed max-w-lg">
+            <p class="text-lg text-gray-600 leading-relaxed max-w-lg mx-auto md:mx-0">
                 Olá, eu sou a Patrícia. Dedico minha vida a transformar a saúde dos seus pés através de tecnologia de ponta e um atendimento humanizado na <strong>Scholl Podologia</strong>. Minha missão é devolver a você o prazer de caminhar sem dor.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
                 <a href="https://wa.me/555184438093?text=Olá,%20entrei%20em%20contato%20ao%20ver%20o%20site.%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Patricia%20Licker." target="_blank" class="flex items-center justify-center gap-2 bg-pink-600 text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-pink-200 hover:bg-pink-700 transition transform hover:-translate-y-1">
                     <i data-lucide="message-circle"></i> Agendar na Clínica
                 </a>
@@ -124,7 +132,17 @@
         </div>
         <div class="flex-1 relative">
             <div class="absolute -z-10 inset-0 bg-pink-100 rounded-full blur-3xl opacity-60 animate-pulse"></div>
-            <img src="foto patricia.jpg" alt="Patrícia Licker Podóloga" class="w-full max-w-sm md:max-w-md mx-auto rounded-[2rem] shadow-2xl border-8 border-white object-cover aspect-[3/4] animate-float">
+            <div class="relative">
+                <img src="foto patricia.jpg" alt="Patrícia Licker Podóloga" class="w-full max-w-sm md:max-w-md mx-auto rounded-[2rem] shadow-2xl border-8 border-white object-cover aspect-[3/4] animate-float">
+                <!-- Caixa de Experiência -->
+                <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 md:-left-8 md:translate-x-0 bg-white p-4 rounded-2xl shadow-xl border border-pink-50 flex items-center gap-3 w-max z-10">
+                    <div class="bg-pink-100 p-2 rounded-full text-pink-600"><i data-lucide="award"></i></div>
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase font-bold tracking-tighter">Experiência</p>
+                        <p class="font-bold text-gray-800 text-sm md:text-base whitespace-nowrap">10+ Anos como Podóloga</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -132,10 +150,10 @@
     <section id="sobre" class="py-24 px-6 bg-white reveal">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
             <div class="flex-1 order-2 md:order-1">
-                <img src="desenho podo2.jpg" alt="Atendimento na Scholl Podologia" class="rounded-3xl shadow-2xl w-full border-4 border-white">
+                <img src="desenho podo2.jpg" alt="Equipa técnica e atendimento Scholl Podologia" class="rounded-3xl shadow-2xl w-full border-4 border-white">
             </div>
-            <div class="flex-1 space-y-6 order-1 md:order-2">
-                <h2 class="text-4xl font-bold text-gray-900 italic">Uma década dedicada ao cuidado dos seus pés.</h2>
+            <div class="flex-1 space-y-6 order-1 md:order-2 text-center md:text-left">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 italic">Uma década dedicada ao cuidado dos seus pés.</h2>
                 <p class="text-gray-600 text-lg leading-relaxed">
                     Com mais de 10 anos de experiência prática, minha trajetória na podologia foi construída sobre o pilar do <strong>estudo contínuo</strong> e da busca constante pelas melhores tecnologias. Entendo que cada pé conta uma história única e carrega o peso de uma rotina inteira, por isso, meu trabalho vai muito além de tratar sintomas: eu busco o bem-estar integral de cada paciente.
                 </p>
@@ -149,12 +167,12 @@
         </div>
     </section>
 
-    <!-- Tratamentos -->
+    <!-- Tratamentos Clínicos -->
     <section id="servicos" class="py-24 px-6 reveal bg-slate-50">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Tratamentos Especializados</h2>
-                <p class="text-gray-500 max-w-2xl mx-auto">Procedimentos clínicos realizados com técnica apurada e foco no seu alívio.</p>
+                <h2 class="text-4xl font-bold mb-4 text-gray-900">Tratamentos Especializados</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto italic">Procedimentos clínicos explicados de forma clara para o seu alívio.</p>
             </div>
             
             <div class="grid md:grid-cols-2 gap-6">
@@ -171,8 +189,8 @@
                     </button>
                     <div class="accordion-content bg-slate-50">
                         <div class="p-8 text-gray-600 border-t border-gray-100 space-y-4">
-                            <p><strong>O que é:</strong> É um procedimento preventivo e higiênico profundo realizado nos pés.</p>
-                            <p>Imagine como uma "limpeza de dentista", mas para os seus pés. Eu realizo o corte técnico das unhas, o desbastamento (afinar) das calosidades e uma assepsia completa. O objetivo é remover o excesso de pele morta e garantir que suas unhas cresçam de forma saudável, evitando infecções e dores futuras.</p>
+                            <p><strong>O que é:</strong> É um procedimento preventivo e higiénico profundo realizado nos pés.</p>
+                            <p>Imagine como uma "limpeza de dentista", mas para os seus pés. Eu realizo o corte técnico das unhas, o desbastamento (afinar) das calosidades e uma assepsia completa. O objetivo é remover o excesso de pele morta e garantir que as suas unhas cresçam de forma saudável, evitando infeções e dores futuras.</p>
                         </div>
                     </div>
                 </div>
@@ -228,8 +246,8 @@
                     </button>
                     <div class="accordion-content bg-slate-50">
                         <div class="p-8 text-gray-600 border-t border-gray-100 space-y-4">
-                            <p><strong>O que é:</strong> Uma infecção fúngica (micose) que afeta a pele dos pés.</p>
-                            <p>É o que conhecemos popularmente como frieira. Ela causa coceira, descamação e às vezes mau cheiro, principalmente entre os dedos. Na consulta, eu realizo a higienização correta da área e oriento sobre o tratamento e as mudanças de hábito para eliminar o fungo e evitar que ele volte.</p>
+                            <p><strong>O que é:</strong> Uma infeção fúngica (micose) que afeta a pele dos pés.</p>
+                            <p>É o que conhecemos popularmente como frieira. Ela causa comichão, descamação e às vezes mau cheiro, principalmente entre os dedos. Na consulta, eu realizo a higienização correta da área e oriento sobre o tratamento e as mudanças de hábito para eliminar o fungo e evitar que ele volte.</p>
                         </div>
                     </div>
                 </div>
@@ -237,7 +255,7 @@
         </div>
     </section>
 
-    <!-- Local de Atendimento e Chamada -->
+    <!-- Agendamento e Mapa -->
     <section class="py-24 px-6 bg-white reveal border-t border-pink-50">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
@@ -248,23 +266,36 @@
             </div>
             
             <div class="flex flex-col lg:flex-row gap-12 items-stretch">
+                <!-- Informações de Contacto da Clínica Ajustadas -->
                 <div class="lg:w-1/3 bg-pink-50 p-8 md:p-12 rounded-[2rem] shadow-xl border-t-8 border-pink-600 flex flex-col justify-center text-center">
-                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Contatos da Clínica</h3>
-                    <div class="space-y-6">
-                        <div class="flex flex-col items-center gap-2">
-                            <i data-lucide="phone" class="text-pink-600"></i>
-                            <span class="font-bold text-lg text-gray-700">(51) 3224-0261</span>
+                    <h3 class="text-2xl font-bold mb-1 text-gray-800">Clínica Scholl</h3>
+                    <p class="text-pink-600 font-bold mb-4 text-lg">Ambiente de Excelência</p>
+                    
+                    <p class="text-gray-600 text-sm md:text-base mb-8 leading-relaxed">
+                        A <strong>Scholl Podologia</strong> é o local onde ofereço o que há de melhor para a sua saúde, com esterilização rigorosa e equipamentos certificados no Centro de Porto Alegre.
+                    </p>
+                    
+                    <div class="space-y-6 text-left border-t border-pink-100 pt-6">
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="map-pin" class="text-pink-600 mt-1 shrink-0"></i>
+                            <span class="text-sm font-semibold text-gray-700 leading-tight italic">R. Mal. Floriano Peixoto, 415 - Centro Histórico, Porto Alegre - RS</span>
                         </div>
-                        <div class="flex flex-col items-center gap-2">
-                            <i data-lucide="message-circle" class="text-pink-600"></i>
-                            <span class="font-bold text-lg text-gray-700">(51) 8443-8093</span>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="phone" class="text-pink-600 shrink-0"></i>
+                            <span class="font-bold text-gray-700">(51) 3224-0261</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="message-circle" class="text-pink-600 shrink-0"></i>
+                            <span class="font-bold text-gray-700">(51) 8443-8093</span>
                         </div>
                     </div>
+                    
                     <a href="https://wa.me/555184438093?text=Olá,%20entrei%20em%20contato%20ao%20ver%20o%20site.%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Patricia%20Licker." target="_blank" class="mt-10 block bg-pink-600 text-white font-bold py-5 rounded-2xl hover:bg-pink-700 transition shadow-lg transform hover:-translate-y-1">
-                        Agendar agora no WhatsApp
+                        Agendar no WhatsApp
                     </a>
                 </div>
 
+                <!-- Mapa Google -->
                 <div class="lg:w-2/3 h-96 lg:h-auto min-h-[400px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white relative">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.079948068571!2d-51.23126782361099!3d-30.03457197492931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951979069a7c36a3%3A0x6b49987820d82937!2sR.%20Mal.%20Floriano%20Peixoto%2C%20415%20-%20Centro%20Hist%C3%B3rico%2C%20Porto%20Alegre%20-%20RS%2C%2090020-022!5e0!3m2!1spt-BR!2sbr!4v1711995000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
@@ -272,13 +303,20 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Rodapé -->
     <footer class="bg-slate-900 text-white pt-16 pb-12 px-6">
         <div class="max-w-7xl mx-auto text-center">
-            <h4 class="text-2xl font-bold text-pink-500 mb-4 italic">Patrícia Licker Podologia</h4>
-            <p class="text-gray-400 mb-8 italic">Scholl Podologia - Porto Alegre</p>
-            <div class="border-t border-gray-800 pt-8 text-gray-500 text-xs">
-                &copy; 2024 Patrícia Licker. Todos os direitos reservados.
+            <!-- Banner Scholl Circular -->
+            <div class="mb-6 flex justify-center">
+                <img src="scholl podologia.jpg" alt="Logo Scholl Podologia" class="w-28 h-28 rounded-full border-4 border-white shadow-lg object-cover bg-white">
+            </div>
+            
+            <h4 class="text-2xl font-bold text-pink-500 mb-2 italic">Patrícia Licker Podologia</h4>
+            <p class="text-gray-400 mb-4 italic text-sm">Scholl Podologia - Atendimento Especializado</p>
+            <p class="text-gray-500 text-xs mb-8 italic">R. Mal. Floriano Peixoto, 415 - Porto Alegre/RS</p>
+            
+            <div class="border-t border-gray-800 pt-8 text-gray-600 text-xs">
+                &copy; 2026 Patrícia Licker Podologia. Todos os direitos reservados.
             </div>
         </div>
     </footer>
@@ -307,7 +345,6 @@
             mobileMenu.classList.toggle('active');
             lucide.createIcons();
         }
-
         menuToggle.addEventListener('click', toggleMenu);
 
         function toggleAccordion(button) {
