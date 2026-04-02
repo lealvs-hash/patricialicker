@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) - Google Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17752409667"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'AW-17752409667');
     </script>
-<meta name="google-site-verification" content="JVDX7Smbfj96QBzyMl3j-wr7XC5HXZkT5KKnL6Ch8I4" />
+
+    <!-- Verificação do Google Search Console -->
+    <meta name="google-site-verification" content="JVDX7Smbfj96QBzyMl3j-wr7XC5HXZkT5KKnL6Ch8I4" />
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!-- SEO & Indexação Google -->
     <title>Patrícia Licker | Podologia de Excelência em Porto Alegre | Scholl Podologia</title>
     <meta name="description" content="Patrícia Licker é podóloga especialista com 10 anos de experiência no Centro Histórico de Porto Alegre. Tratamento de unha encravada, podoprofilaxia e onicofose na Scholl Podologia.">
@@ -20,14 +23,17 @@
     <meta name="author" content="Patrícia Licker">
     <link rel="canonical" href="https://patricialickerpodologia.com.br">
     
-    <!-- Open Graph (Redes Sociais) -->
+    <!-- Open Graph (Redes Sociais e WhatsApp) -->
     <meta property="og:title" content="Patrícia Licker | Podologia de Excelência em Porto Alegre">
     <meta property="og:description" content="Especialista em saúde dos pés no centro de Porto Alegre com 10 anos de experiência. Agende sua consulta na Scholl Podologia.">
     <meta property="og:url" content="https://patricialickerpodologia.com.br">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.patricialickerpodologia.com.br/favicon-500x500.jpg">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="favicom-500x500.jpg">
+    <link rel="icon" type="image/jpeg" href="favicon-500x500.jpg?v=3">
     
     <!-- Scripts e Fontes -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -81,9 +87,11 @@
         .mobile-menu.active {
             transform: translateX(0);
         }
-        .card-title {
-            word-break: keep-all;
-            overflow-wrap: break-word;
+        .drawing-card {
+            transition: transform 0.3s ease;
+        }
+        .drawing-card:hover {
+            transform: scale(1.02);
         }
     </style>
 </head>
@@ -91,7 +99,6 @@
 
     <!-- Navegação -->
     <nav class="fixed w-full z-50 glass-morphism py-3 px-6 md:px-12 flex justify-between items-center">
-        <!-- Logótipo Patricia Licker Podologia -->
         <div class="flex items-center gap-3">
             <i data-lucide="footprints" class="text-pink-600 w-8 h-8"></i>
             <div class="flex flex-col items-center leading-tight">
@@ -101,24 +108,26 @@
         </div>
         
         <!-- Menu Desktop -->
-        <div class="hidden md:flex gap-8 font-medium items-center">
+        <div class="hidden md:flex gap-8 font-medium items-center text-sm lg:text-base">
             <a href="#inicio" class="hover:text-pink-600 transition">Início</a>
             <a href="#sobre" class="hover:text-pink-600 transition">A Patrícia</a>
             <a href="#servicos" class="hover:text-pink-600 transition">Tratamentos</a>
-            <a href="https://wa.me/555184438093?text=Olá,%20entrei%20em%20contato%20ao%20ver%20o%20site.%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Patricia%20Licker." target="_blank" class="bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-700 transition shadow-md shadow-pink-100">Agendar</a>
+            <a href="#contato" class="hover:text-pink-600 transition">Localização</a>
+            <a href="https://wa.me/555184438093?text=Olá,%20entrei%20em%20contato%20ao%20ver%20o%20site.%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Patricia%20Licker." target="_blank" class="bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-700 transition shadow-md shadow-pink-100 font-bold">Agendar</a>
         </div>
 
         <!-- Toggle Menu Mobile -->
         <button class="md:hidden text-pink-600 p-2 border border-pink-100 rounded-lg bg-white/50" id="menuToggle">
-            <i data-lucide="footprints"></i>
+            <i data-lucide="menu"></i>
         </button>
     </nav>
 
     <!-- Menu Lateral Mobile -->
-    <div id="mobileMenu" class="fixed inset-0 z-40 bg-white/95 mobile-menu md:hidden flex flex-col justify-center items-center gap-8 text-2xl font-bold">
+    <div id="mobileMenu" class="fixed inset-0 z-[60] bg-white/95 mobile-menu md:hidden flex flex-col justify-center items-center gap-8 text-2xl font-bold">
         <a href="#inicio" onclick="toggleMenu()" class="text-gray-800">Início</a>
         <a href="#sobre" onclick="toggleMenu()" class="text-gray-800">A Patrícia</a>
         <a href="#servicos" onclick="toggleMenu()" class="text-gray-800">Tratamentos</a>
+        <a href="#contato" onclick="toggleMenu()" class="text-gray-800">Localização</a>
         <a href="https://wa.me/555184438093?text=Olá,%20entrei%20em%20contato%20ao%20ver%20o%20site.%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Patricia%20Licker." onclick="toggleMenu()" class="bg-pink-600 text-white px-8 py-3 rounded-full text-lg shadow-xl shadow-pink-200">Agendar Agora</a>
         <button onclick="toggleMenu()" class="mt-8 text-pink-400 flex items-center gap-2 text-sm font-normal"><i data-lucide="x"></i> Fechar</button>
     </div>
@@ -144,7 +153,6 @@
             <div class="absolute -z-10 inset-0 bg-pink-100 rounded-full blur-3xl opacity-60 animate-pulse"></div>
             <div class="relative">
                 <img src="foto patricia.jpg" alt="Patrícia Licker Podóloga" class="w-full max-w-sm md:max-w-md mx-auto rounded-[2rem] shadow-2xl border-8 border-white object-cover aspect-[3/4] animate-float">
-                <!-- Caixa de Experiência -->
                 <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 md:-left-8 md:translate-x-0 bg-white p-4 rounded-2xl shadow-xl border border-pink-50 flex items-center gap-3 w-max z-10">
                     <div class="bg-pink-100 p-2 rounded-full text-pink-600"><i data-lucide="award"></i></div>
                     <div>
@@ -173,6 +181,22 @@
                 <p class="text-gray-600 text-lg leading-relaxed">
                     Na <strong>Scholl Podologia</strong>, no coração de Porto Alegre, uno essa experiência humana a equipamentos de alta tecnologia para garantir resultados rápidos, indolores e definitivos. Minha meta é que você saia do consultório sentindo-se renovado e pronto para caminhar com leveza.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Ilustrações: A Arte do Cuidado -->
+    <section class="py-20 px-6 bg-pink-50/30 reveal">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="drawing-card space-y-4">
+                    <img src="desenho podo.jpg" alt="Ilustração Cuidado Podológico" class="rounded-[2.5rem] shadow-xl w-full border-8 border-white bg-white">
+                    <p class="text-center italic text-pink-700 font-medium px-4">"O cuidado com os pés é a base para um caminhar seguro e sem dores."</p>
+                </div>
+                <div class="drawing-card space-y-4">
+                    <img src="desenho podo1.jpg" alt="Ilustração Técnica Podológica" class="rounded-[2.5rem] shadow-xl w-full border-8 border-white bg-white">
+                    <p class="text-center italic text-pink-700 font-medium px-4">"A precisão técnica encontra o toque humano para devolver a sua qualidade de vida."</p>
+                </div>
             </div>
         </div>
     </section>
@@ -265,11 +289,11 @@
         </div>
     </section>
 
-    <!-- Contacto e Mapa -->
-    <section class="py-24 px-6 bg-white reveal border-t border-pink-50">
+    <!-- Localização e Contacto -->
+    <section id="contato" class="py-24 px-6 bg-white reveal border-t border-pink-50">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Agende seu Horário</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 italic">Onde estamos Localizados</h2>
                 <p class="text-pink-600 font-bold text-xl md:text-2xl italic">
                     Marque sua consulta com a Patricia Licker e recupere o prazer de caminhar.
                 </p>
@@ -353,6 +377,7 @@
 
         function toggleMenu() {
             mobileMenu.classList.toggle('active');
+            // Re-render icons when menu opens/closes
             lucide.createIcons();
         }
         menuToggle.addEventListener('click', toggleMenu);
